@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coleman Hicks' Website</title>
+
+
+<style>
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 div {
   background-color: teal;
   width: 100%;
   padding: 11px;
 }
+    p.dashed {border-style: dashed;}
+    p.solid {border-style: solid;}
 
 </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coleman Hicks' Website</title>
-    
+
 </head>
 <body>
 
@@ -24,16 +29,48 @@ div {
 
     <section>
         <h2>Hey! I’m Coleman. Welcome to my Homepage!</h2>
-        <p>Below, you’ll find out more about who I am, what I do, how you can contact me, and my Resume.</p>
+        <p class="dashed">Below, you’ll find out more about who I am, what I do, how you can contact me, and my Resume.</p>
+
     </section>
+
+    
+ <hr>
 
     <section>
         <h2>Who am I?</h2>
-        <p id="demo">I am:</p>
-        <button type="button" onclick='document.getElementById("demo").innerHTML = "I am Caring!"'>Click Me!</button>
+        <p> Find out about me!</p>
+        <p id="demo">Click on my most Frequently Asked Questions Below.</p>
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "I am from Boston, Massachusetts!"'>Where are you from?</button>
+         <button type="button" onclick='document.getElementById("demo").innerHTML = "I live in Munich!"'>Where do you live now?</button>
+         <button type="button" onclick='document.getElementById("demo").innerHTML = "I am 15 years old!"'>How old are you?</button>
+    </section>
+    <hr>
+    <section>    
+        <h2> What are my Key Values?</h2>
+    <input type="button" id="btnSearch" value="Click to Discover some of my Key Values!" onclick="GetValue();">
+        <p id="message">Press the Button To Discover My Key Traits!</p>
+  <hr>
+    <script>
+    function GetValue()
+{
+    var thingsAboutColeman= new Array("I am Devoted!","I am Empathetic!","I am Couragous", "I am ");
+    var random = thingsAboutColeman[Math.floor(Math.random() * thingsAboutColeman.length)];
+   document.getElementById("message").innerHTML=random;
 
-        
+}
+  </script>
     </section>
 
-</body>
-</html>
+        
+     <section>
+        <h2>My Resume:</h2>
+        <p> Open the PDF Document below to view my Resume. For any questions, don't hesitate to contact me using the info provided below.</p>
+        add the file here
+         
+        </section>
+    <hr>
+    
+        <h2>Contact Info:</h2>
+        <p>Contact me via E-Mail at:</p> <h4><p class="solid"><a href="mailto:coleman_hicks@mis-munich.de">coleman_hicks@mis-munich.de</a>
+        <p>I look forward to hearing from you!</p>
+
